@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Weather Forecast"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="#2c3e50"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Input Fields Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="32dp">
+
+        <!-- City EditText -->
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Enter City Name"
+            android:inputType="textPersonName"
+            android:textColor="#2c3e50"
+            android:textColorHint="#7f8c8d"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"/>
+
+        <!-- Country Code EditText -->
+        <EditText
+            android:id="@+id/etCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Enter Country Code (Optional)"
+            android:inputType="textPersonName"
+            android:textColor="#2c3e50"
+            android:textColorHint="#7f8c8d"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"/>
+    </LinearLayout>
+
+    <!-- Get Weather Button -->
+    <Button
+        android:id="@+id/btnGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_button"
+        android:text="Get"
+        android:textColor="@android:color/white"
+        android:onClick="getWeatherDetails"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:padding="14dp"/>
+
+    <!-- ScrollView for Weather Result -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:padding="16dp"
+        android:background="@drawable/rounded_background"
+        android:scrollbars="vertical"
+        android:elevation="4dp"
+    android:layout_marginTop="16dp">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#2c3e50"
+    android:textSize="16sp"
+    android:lineSpacingExtra="4dp"
+    android:ellipsize="end"
+    android:maxLines="6"
+    android:fontFamily="sans-serif-medium"
+    android:gravity="start|top"
+    android:textAlignment="viewStart"
+    android:scrollHorizontally="false"
+    android:hyphenationFrequency="full"
+    android:shadowColor="#dcdcdc"
+    android:shadowRadius="3"
+    android:shadowDx="0"
+    android:shadowDy="2"
+    android:padding="12dp"
+    android:layout_marginTop="8dp"/>
+</ScrollView>
+
+
+
+    <!-- AdView for Banner Ad -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_adunit_id"/>
+
+</LinearLayout>

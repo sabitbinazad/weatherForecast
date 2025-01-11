@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Solid color for button -->
+    <solid android:color="#0070c7"/>
+
+    <!-- Rounded corners for smooth edges -->
+    <corners android:radius="12dp"/>
+
+    <!-- Padding inside the button to make it more spacious -->
+    <padding android:left="30dp" android:right="30dp" android:top="12dp" android:bottom="12dp"/>
+
+    <!-- Add a border effect -->
+    <stroke android:color="#005a8c" android:width="2dp"/>
+
+    <!-- Pressed state effect for interactivity -->
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:drawable="@drawable/rounded_button_pressed" android:state_pressed="true"/>
+        <item android:drawable="@drawable/rounded_button_normal"/>
+    </selector>
+</shape>
